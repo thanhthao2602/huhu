@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ktra(){
+        var x=window.document.nhap.so.value;
+        var a=x.toString();
+        if(a===a.split("").reverse().join("")){
+            window.document.nhap.kq.value= "True";
+        }else window.document.nhap.kq.value = "False";
+        }
+       
+    </script>
+</head>
+<body>
+    <form name="nhap">
+        <table align="center" border="1" style="border-collapse: collapse; background-color: rgb(156, 232, 207);">
+           
+            <caption><strong>Kiểm tra số đối xứng</strong></caption>
+            <tr>
+                <th>Nhập một số</th>
+                <td><input type="text" name="so"></td>
+            </tr>
+            <tr>
+                <th>Là số đối xứng?</th>
+                <td><input type="text" name="kq"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="button" value="Kiểm tra" onclick="ktra();">
+                    <input type="reset" value="Xóa">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

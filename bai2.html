@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra tam giác</title>
+</head>
+<script>
+    function kiemTraTamGiac() {
+        var x = window.document.nhap.canh.value;
+        var canh = x.split(",");
+
+        var a = parseFloat(canh[0]);
+        var b = parseFloat(canh[1]);
+        var c = parseFloat(canh[2]);
+        if(a<=0 || b<=0 || c<=0){
+            alert("Nhập lại đi má!!!");
+        }
+        
+        if (a > 0 && b > 0 && c > 0 && (a + b > c) && (a + c > b) && (b + c > a)) {
+            window.document.nhap.kq.value = "Đúng vậy!!!";
+        } else {
+            window.document.nhap.kq.value = "X Sai X";
+        }
+    }
+</script>
+<body>
+
+<form name="nhap">
+    <table align="center" border="1" style="border-collapse: collapse; background-color: pink;">
+
+    
+    <tr>
+   <th>Nhập ba số dương</th><td><input  type="text" name="canh"></td>
+</tr>
+    <tr>
+        <th>Là ba cạnh của một tam giác?</th>
+        <td><input type="text" name="kq" readonly></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;" colspan="2">
+            <input type="button" value="Kiểm tra tam giác" onclick="kiemTraTamGiac()">
+            <input type="reset" value="Xóa">
+        </td>
+    </tr>
+    </table>
+    
+    
+</form>
+
+
+
+</body>
+</html>

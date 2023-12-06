@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chèn chuỗi vào vị trí cụ thể</title>
+</head>
+<script>
+    function chenChuoi() {
+        var chuoiGoc = window.document.nhap.chuoiGoc.value;
+        var chuoiChen = window.document.nhap.chuoiChen.value;
+        var viTri = parseInt(window.document.nhap.viTri.value);
+
+       
+            var chuoiKetQua = chuoiGoc.slice(0, viTri) + chuoiChen + chuoiGoc.slice(viTri);
+            window.document.nhap.kq.value = chuoiKetQua;
+         
+    }
+</script>
+<body>
+
+<form name="nhap">
+    <table border="1" align="center" style="border-collapse: collapse; background-color: rgb(97, 97, 223);">
+        <tr>
+        <th>Chuỗi gốc</th>
+        <td><input type="text" name="chuoiGoc"></td>
+    </tr>
+    <tr>
+        <th>Chuỗi chèn</th>
+        <td><input type="text" name="chuoiChen"></td>
+    </tr>
+    <tr>
+        <th>Vị trí chèn</th>
+       <td><input type="text" name="viTri"></td> 
+    </tr>
+    <tr>
+        <th>Kết quả</th>
+        <td><input type="text" name="kq"></td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align: center;">
+            <input type="button" value="Chèn chuỗi" onclick="chenChuoi()">
+         <input type="reset" value="Xóa">
+        </td>
+    </tr>
+    </table>
+    
+</form> 
+     
+</body>
+</html>
+    
+    
+     
+     
+           
+
+
+

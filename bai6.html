@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+ function tim(){
+    var x = window.document.nhap.so.value;
+    var so = x.split(",");
+    var a= parseInt(so[0]);
+    var b= parseInt(so[1]);
+    window.document.nhap.uc.value = ucln(a,b);
+        window.document.nhap.bc.value = bcnn(a,b);
+    
+ }
+ function ucln(a,b){
+if(a==0 || b==0){
+       return a+b;
+    }
+    while(a!=b){
+        if(a>b)
+        a=a-b;
+    else
+        b=b-a;
+    
+    } return b;
+ }
+ function bcnn(a,b){
+    return (a*b)/ucln(a,b);
+ }
+    </script>
+</head>
+<body>
+    <form name="nhap">
+        <table border="1" align="center" style="border-collapse: collapse; background-color: rgb(231, 87, 87);">
+         <tr>
+ <th>Nhập hai số nguyên dương</th>
+         <td><input type="text" name="so"></td>
+         </tr>
+        <tr>
+            <th>UCLN</th>
+         <td><input type="text" name="uc"></td>
+        </tr>
+         <tr>
+          <th>BCNN</th>
+         <td><input type="text" name="bc"></td>  
+         </tr>
+         <tr>
+            <td colspan="2" style="text-align: center;">
+                <input type="button" value="Tìm" onclick="tim()">
+                <input type="reset" value="Xóa">
+            </td>
+         </tr>
+
+        </table>
+    </form>
+
+</body>
+</html>
